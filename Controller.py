@@ -14,11 +14,10 @@ class Controller:
     def solicitar(self):
         try:
             with self.connection.cursor() as cursor:
-                # Read a single record
                 sql = "SELECT * FROM `tweet`"
                 cursor.execute(sql)
-                result = cursor.fetchall()
-                print(result)
+                results = cursor.fetchall()
+                return results
 
         finally:
             self.connection.close()

@@ -30,16 +30,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
+          {%for result in results%}
             <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
+                <td><p>{{result.getHora()}}</p></td>
+                 <td><p>{{result.getUsuario()}}</p></td>
+                 <td><p>{{result.getDatos()}}</p></td>
+            </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
